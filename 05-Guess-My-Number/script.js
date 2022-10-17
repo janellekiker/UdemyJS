@@ -1,3 +1,3 @@
-'use strict';
-
-console.log(document.querySelector('.message').textContent);
+"use strict";
+// testing my git skills
+console.log(document.querySelector(".message").textContent);
