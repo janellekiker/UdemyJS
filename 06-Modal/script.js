@@ -15,9 +15,15 @@ const closeModal = function () {
   overlay.classList.add("hidden");
 };
 
-for (let i = 0; i < btnsShowModal.length; i++) {
+for (let i = 0; i < btnsShowModal.length; i++)
   btnsShowModal[i].addEventListener("click", showModal);
 
-  btnCloseModal.addEventListener("click", closeModal);
-  overlay.addEventListener("click", closeModal);
-}
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+// Close modal with escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
